@@ -1,0 +1,12 @@
+{
+    "recipes": {
+        "m4n50n/oauth2-azure-bundle": ["0.1"]
+    },
+    "branch": "master",
+    "is_contrib": false,
+    "_links": {
+        "repository": "github.com/m4n50n/symfony_flex_recipes",        
+        "origin_template": "{package}:{version}@github.com/m4n50n/symfony_flex_recipes:master",
+        "recipe_template": "https://api.github.com/repos/m4n50n/symfony_flex_recipes/contents/{package_dotted}.{version}.json"
+    }
+}

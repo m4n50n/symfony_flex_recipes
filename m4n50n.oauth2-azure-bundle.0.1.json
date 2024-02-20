@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "m4n50n/oauth2-azure-bundle": {
+            "manifest": {
+                "bundles": {
+                    "M4n50n\\OAuth2AzureBundle\\OAuth2AzureBundle": ["all"]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "cache:clear": "symfony-cmd"
+                },
+                "env": {
+                    "AUTH_CLIEN_ID": "",
+                    "AUTH_CLIENT_PASS": "",
+                    "AUTH_TENANT": "",
+                    "AUTH_REDIRECT_URI": "",
+                    "AUTH_REDIRECT_TO_URL": false,
+                    "AUTH_REDIRECT_URL": ""
+                }
+            },
+            "files": {
+                "config/packages/oauth2_azure.yaml": {
+                    "contents": [
+                        "o_auth2_azure:",
+                        "    clientId: '%env(AUTH_CLIEN_ID)%'",
+                        "    clientSecret: '%env(AUTH_CLIENT_PASS)%'",
+                        "    tenant: '%env(AUTH_TENANT)%'",
+                        "    redirectUri: '%env(AUTH_REDIRECT_URI)%'",
+                        "",
+                        "    # Optional",
+                        "    redirectToUrl: '%env(bool:AUTH_REDIRECT_TO_URL)%' # Activate redirect after authentication",
+                        "    redirectUrl: '%env(AUTH_REDIRECT_URL)%' # URL to redirect after authentication",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "de44b5af31faedf24de627c999510032f5601b6d"
+        }
+    }
+}
