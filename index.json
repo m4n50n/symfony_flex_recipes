@@ -1,6 +1,7 @@
 {
     "recipes": {
-        "m4n50n/oauth2-azure-bundle": ["0.1"]
+        "m4n50n/oauth2-azure-bundle": ["0.1"],
+        "m4n50n/telegram-bot-bundle": ["0.1"]
     },
     "branch": "master",
     "is_contrib": false,
